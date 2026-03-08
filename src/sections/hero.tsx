@@ -1,0 +1,104 @@
+"use client";
+
+import { Container } from "@/components/container";
+import { Badge } from "@/components/badge";
+import { profile } from "@/data/portfolio";
+import { motion } from "framer-motion";
+import { ArrowRight, Mail } from "lucide-react";
+
+export function Hero() {
+  return (
+    <section className="py-14 md:py-20">
+      <Container>
+        <div className="grid items-center gap-10 md:grid-cols-[1.1fr_0.9fr]">
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="flex flex-wrap gap-2"
+            >
+              <Badge>{profile.location}</Badge>
+              <Badge>Open to Software Engineering Opportunities</Badge>
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.05, duration: 0.5 }}
+              className="mt-5 text-4xl font-semibold tracking-tight md:text-6xl"
+            >
+              {profile.name}
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.5 }}
+              className="mt-3 text-xl font-medium text-zinc-700"
+            >
+              {profile.title}
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15, duration: 0.5 }}
+              className="mt-2 text-lg text-zinc-500"
+            >
+              {profile.subtitle}
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="mt-6 max-w-xl text-lg leading-8 text-zinc-700"
+            >
+              {profile.about}
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.25, duration: 0.5 }}
+              className="mt-8 flex flex-wrap items-center gap-4"
+            >
+              <a
+                href="#projects"
+                className="inline-flex items-center gap-2 rounded-2xl bg-zinc-900 px-5 py-3 text-white hover:bg-zinc-800"
+              >
+                View Projects <ArrowRight className="h-4 w-4" />
+              </a>
+
+              <a
+                href={`mailto:${profile.email}`}
+                className="inline-flex items-center gap-2 rounded-2xl border border-zinc-200 px-5 py-3 text-zinc-900 hover:bg-zinc-50"
+              >
+                <Mail className="h-4 w-4" /> Contact Me
+              </a>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.05, duration: 0.5 }}
+            className="mx-auto w-full max-w-sm"
+          >
+            <div className="rounded-3xl border border-zinc-200 bg-white p-4 shadow-sm">
+              <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100">
+                <img src="/DP.jpg" alt="Deepika Jakati" className="h-full w-full object-cover" />
+              </div>
+
+              <div className="mt-4 rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
+                <p className="text-sm text-zinc-500">Current Focus</p>
+                <p className="mt-1 font-medium text-zinc-800">Graduate Studies • Software Engineering • DevOps</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </Container>
+    </section>
+  );
+}
