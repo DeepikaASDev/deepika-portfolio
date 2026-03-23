@@ -4,7 +4,7 @@ import { Container } from "@/components/container";
 import { Badge } from "@/components/badge";
 import { profile } from "@/data/portfolio";
 import { motion } from "framer-motion";
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, FileText, Github, Linkedin, Mail } from "lucide-react";
 
 export function Hero() {
   return (
@@ -19,7 +19,8 @@ export function Hero() {
               className="flex flex-wrap gap-2"
             >
               <Badge>{profile.location}</Badge>
-              <Badge>Open to Software Engineering Opportunities</Badge>
+              {/* <Badge>Open to Software Engineering Opportunities</Badge> */}
+              <Badge>M.S. Computer Science</Badge>
             </motion.div>
 
             <motion.h1
@@ -53,7 +54,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="mt-6 max-w-xl text-lg leading-8 text-zinc-700"
+              className="mt-6 max-w-2xl text-lg leading-8 text-zinc-700"
             >
               {profile.about}
             </motion.p>
@@ -72,11 +73,30 @@ export function Hero() {
               </a>
 
               <a
+                href={profile.links.resumePdf}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-2xl border border-zinc-200 px-5 py-3 text-zinc-900 hover:bg-zinc-50"
+              >
+                <FileText className="h-4 w-4" /> Resume
+              </a>
+
+              <a
                 href={`mailto:${profile.email}`}
                 className="inline-flex items-center gap-2 rounded-2xl border border-zinc-200 px-5 py-3 text-zinc-900 hover:bg-zinc-50"
               >
                 <Mail className="h-4 w-4" /> Contact Me
               </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+              className="mt-6 flex flex-wrap gap-3"
+            >
+              <a href={profile.links.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-zinc-200 px-4 py-2 text-sm hover:bg-zinc-50"><Github className="h-4 w-4" /> GitHub</a>
+              <a href={profile.links.linkedin} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-zinc-200 px-4 py-2 text-sm hover:bg-zinc-50"><Linkedin className="h-4 w-4" /> LinkedIn</a>
             </motion.div>
           </div>
 
@@ -91,10 +111,20 @@ export function Hero() {
                 <img src="/DP.jpg" alt="Deepika Jakati" className="h-full w-full object-cover" />
               </div>
 
-              <div className="mt-4 rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
-                <p className="text-sm text-zinc-500">Current Focus</p>
-                <p className="mt-1 font-medium text-zinc-800">Graduate Studies • Software Engineering • DevOps</p>
-              </div>
+              {/* <div className="mt-4 grid gap-3 sm:grid-cols-3">
+                <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
+                  <p className="text-xs uppercase tracking-wide text-zinc-500">Experience</p>
+                  <p className="mt-1 font-semibold text-zinc-800">2+ Years</p>
+                </div>
+                <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
+                  <p className="text-xs uppercase tracking-wide text-zinc-500">Focus</p>
+                  <p className="mt-1 font-semibold text-zinc-800">Full Stack</p>
+                </div>
+                <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
+                  <p className="text-xs uppercase tracking-wide text-zinc-500">Projects</p>
+                  <p className="mt-1 font-semibold text-zinc-800">Data + IoT</p>
+                </div>
+              </div> */}
             </div>
           </motion.div>
         </div>

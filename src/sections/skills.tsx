@@ -21,15 +21,15 @@ export function Skills() {
     <section id="skills" className="py-16 bg-zinc-50/60">
       <Container>
         <h2 className="text-2xl font-semibold">Technical Skills</h2>
-        <p className="mt-2 text-zinc-600">Focused, ATS-friendly categories.</p>
+        <p className="mt-2 text-zinc-600">Skills updated to match the resume content directly.</p>
 
         <div className="mt-8 grid gap-6 md:grid-cols-2">
           <SkillGroup title="Programming Languages" items={skills.languages} />
-          <SkillGroup title="Frontend Development" items={skills.frontend} />
-          <SkillGroup title="Backend / API Integration" items={skills.backendApi} />
-          <SkillGroup title="Databases" items={skills.databases} />
-          <SkillGroup title="DevOps & Version Control" items={skills.devops} />
-          <SkillGroup title="Tools & Platforms" items={skills.tools} />
+          <SkillGroup title="Frontend" items={skills.frontend} />
+          <SkillGroup title="Backend & APIs" items={skills.backendApi} />
+          <SkillGroup title="Databases & Caching" items={skills.databases} />
+          <SkillGroup title="Tools" items={skills.tools} />
+          <SkillGroup title="Software Development Practices" items={skills.practices} />
         </div>
       </Container>
     </section>

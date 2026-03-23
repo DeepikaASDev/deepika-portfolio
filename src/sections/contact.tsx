@@ -10,7 +10,7 @@ export function Contact() {
       <Container>
         <div className="rounded-3xl border border-zinc-200 bg-white p-8 shadow-soft">
           <h2 className="text-2xl font-semibold">Contact</h2>
-          <p className="mt-2 text-zinc-600">Want to talk about a role or project? Let’s connect.</p>
+          <p className="mt-2 text-zinc-600">Interested in frontend, full-stack, or software engineering roles? Let’s connect.</p>
 
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             <div className="rounded-2xl border border-zinc-200 p-5">
@@ -20,6 +20,17 @@ export function Contact() {
             <div className="rounded-2xl border border-zinc-200 p-5">
               <p className="text-sm text-zinc-600">Phone</p>
               <a className="mt-1 block font-medium hover:underline" href={`tel:${profile.phone}`}>{profile.phone}</a>
+            </div>
+          </div>
+
+          <div className="mt-4 grid gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-zinc-200 p-5">
+              <p className="text-sm text-zinc-600">LinkedIn</p>
+              <a className="mt-1 block font-medium hover:underline" href={profile.links.linkedin} target="_blank" rel="noreferrer">View Profile</a>
+            </div>
+            <div className="rounded-2xl border border-zinc-200 p-5">
+              <p className="text-sm text-zinc-600">GitHub</p>
+              <a className="mt-1 block font-medium hover:underline" href={profile.links.github} target="_blank" rel="noreferrer">View Projects</a>
             </div>
           </div>
 
