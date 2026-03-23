@@ -1,7 +1,7 @@
 export const profile = {
   name: "Deepika Jakati",
   title: "Software Engineer & M.S. Computer Science ",
-  // subtitle: "Frontend Development • REST APIs • Data Pipelines • IoT Systems",
+  subtitle: "Full Stack Developer | Building scalable web & cloud applications",
   location: "Stockton, CA",
   email: "deepikajakati@gmail.com",
   phone: "+1 (209) 279-8311",
