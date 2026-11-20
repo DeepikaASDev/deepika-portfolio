@@ -19,6 +19,6 @@ Edit `src/data/portfolio.ts` (name, links, projects, skills).
 
 ## 4) Add your resume + photo
 Place:
-- `public/Deepika_Resume.pdf`
-- `public/profile.jpg`
+- `public/Deepika_Jakati_Resume.pdf`
+- `public/DP.jpg`
 Then update the links in `src/data/portfolio.ts`.
